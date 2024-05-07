@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#canvas1 {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+
+    font-family: "MedievalSharp", cursive;
+}
+
+
+#player, #layer1, #layer2, #layer3, #layer4, #layer5, #layer6, #layer7, #layer8, #layer9,#layer10,#layer11,#layer12, #enemy_fly, #enemy_plant, #enemy_spider_big, #enemy_skeleton, #enemy_goblin  ,#fire, #collisionAnimation, #lives {
+    display: none;
+
+}
