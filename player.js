@@ -8,7 +8,7 @@ export class Player{
         this.width = 80; // 265 //261 // 124.83
         this.height = 80; // 200 //142 // 113.5
         this.x = 0;
-        this.y = this.game.height - this.height  - this.game.groundMargin;
+        this.y = this.game.height - this.height - this.game.groundMargin;
         this.vy = 0;
         this.weight = 1;
         this.image = document.getElementById('player');
@@ -54,11 +54,11 @@ export class Player{
     }
     draw(context){
         if(this.game.debug) context.strokeRect(this.x, this.y , this.width , this.height );
-        context.drawImage(this.image, this.frameX * this.width , this.frameY * this.height, this.width, this.height , this.x - 80, this.y , this.width *2.5, this.height *2.5);
+        context.drawImage(this.image, this.frameX * this.width , this.frameY * this.height, this.width, this.height, this.x - 70, this.y - 80 , this.width *2.5, this.height *2.5);
 
     }
     onGround(){
-        return this.y >= this.game.height - this.height - this.game.groundMargin;
+        return this.y >= this.game.height - this.height - 15 - this.game.groundMargin;
     }
     setState(state, speed){
         this.currentState = this.states[state];

@@ -14,7 +14,7 @@
         constructor(width, height){
             this.width=width;
             this.height=height;
-            this.groundMargin = 140;
+            this.groundMargin = 50;
             this.speed = 0;
             this.maxSpeed = 6;
             this.background = new Background(this);

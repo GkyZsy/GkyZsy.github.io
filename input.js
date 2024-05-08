@@ -3,7 +3,7 @@ export class InputHandler{
         this.game = game;
         this.keys = [];
         var audio = document.getElementById("music");
-        audio.volume = 0.01;
+        audio.volume = 0;//0.01;
         window.addEventListener('keydown', e => {
             if((e.key === 'ArrowDown' ||
                 e.key === 'ArrowUp' ||
