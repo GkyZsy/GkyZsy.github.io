@@ -73,8 +73,34 @@
         <div class="control" data-id="about">
             <i class="fas fa-user"></i>
         </div>
-
+        <div id="stats" style="display: none;">
+            <script type="text/javascript" src="//counter.websiteout.com/js/2/5/0/0"></script>
+        </div>
     </div>
     <script src="app.js"></script>
+    <script>
+        var secretWord = ""; // Initialize an empty string to store user input
+        var toggle = false; // Initialize toggle variable to track visibility
+      
+        document.addEventListener("keydown", function(event) {
+          if (event.key === "d" || event.key === "e" || event.key === "v") {
+            
+            secretWord += event.key;
+          } else {
+            
+            secretWord = "";
+          }
+          if(secretWord.length>=3 && secretWord != "dev"){
+            secretWord="";
+          }
+          
+          if (secretWord === "dev") {
+            var div = document.getElementById("stats");
+            toggle = !toggle; // Toggle the state
+            div.style.display = toggle ? "block" : "none"; // Toggle display property
+            secretWord = ""; // Reset secretWord after successful toggle
+          }
+        }); 
+    </script>
 </body>
 </html>
