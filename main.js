@@ -10,13 +10,16 @@
     canvas.width = 1500;
     canvas.height = 793;
 
+    const music = document.getElementById('music');
+    music.volume = 0.05; // yarı yarıya (0.1 yerine 0.05)
+
     class Game{
         constructor(width, height){
             this.width=width;
             this.height=height;
             this.groundMargin = 50;
             this.speed = 0;
-            this.maxSpeed = 6;
+            this.maxSpeed = 3; //6
             this.background = new Background(this);
             this.player = new Player(this);
             this.input = new InputHandler(this);
@@ -25,7 +28,7 @@
             this.particles = [];
             this.collisions = [];
             this.floatingMessages = [];
-            this.maxParticles = 100;
+            this.maxParticles = 250;
             this.enemyTimer = 0;
             this.enemyInterval = 300;
             this.debug = false;

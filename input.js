@@ -2,9 +2,25 @@ export class InputHandler{
     constructor(game){
         this.game = game;
         this.keys = [];
+        this.musicStarted = false;
         var audio = document.getElementById("music");
         audio.volume = 0.01;
         window.addEventListener('keydown', e => {
+            if (!this.musicStarted && 
+            (e.key === 'ArrowDown' ||
+                e.key === 'ArrowUp' ||
+                e.key === 'ArrowLeft' ||
+                e.key === 'ArrowRight' ||
+                e.key === ' ')
+            ) {
+                audio.play().catch(()=>{});
+                this.musicStarted = true;
+            }
+
+
+
+
+            
             if((e.key === 'ArrowDown' ||
                 e.key === 'ArrowUp' ||
                 e.key === 'ArrowLeft'  ||

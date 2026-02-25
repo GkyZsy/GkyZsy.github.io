@@ -59,14 +59,14 @@ export class GroundEnemy extends  Enemy{
     constructor(game){
         super();
         this.game = game;
-        this.width = 150;
+        this.width = 150;//150
         this.height = 150;
         this.x = this.game.width;
         this.y = this.game.height - this.height - this.game.groundMargin;
         this.image = document.getElementById('enemy_plant');
         this.speedX = 0;
         this.speedY = 0;
-        this.MaxFrame = 10;
+        this.MaxFrame = 10; //10
     }
 
 
@@ -92,14 +92,14 @@ export class GroundEnemy3 extends  Enemy{ //goblin
     constructor(game){
         super();
         this.game = game;
-        this.width = 150;
+        this.width = 150; //150
         this.height = 150;
         this.x = this.game.width;
         this.y = this.game.height - this.height - this.game.groundMargin;
         this.image = document.getElementById('enemy_goblin');
         this.speedX = 0;
         this.speedY = 0;
-        this.MaxFrame = 11;
+        this.MaxFrame = 11; //11
         //this.va = Math.random() * 0.9 + 0.9;
     }
 

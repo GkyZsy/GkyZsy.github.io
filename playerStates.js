@@ -144,6 +144,53 @@ export class Diving extends State {
         this.game.player.vy = 15;
     }
     handleInput(input){
+  // Havada: daha yoğun alev izi
+  for (let i = 0; i < 4; i++) {
+    this.game.particles.unshift(
+      new Fire(
+        this.game,
+        this.game.player.x + this.game.player.width * 0.5 + (Math.random() * 40 - 20),
+        this.game.player.y + this.game.player.height * 0.5 + (Math.random() * 40 - 20)
+      )
+    );
+  }
+
+  // Yere vurduysa: önce impact partikülleri üret, sonra state değiştir
+  if (this.game.player.onGround()) {
+    // Splash sayısını artır + yayı genişlet
+    for (let i = 0; i < 70; i++) {
+      this.game.particles.unshift(
+        new Splash(
+          this.game,
+          this.game.player.x + this.game.player.width * 0.5 + (Math.random() * 220 - 110),
+          this.game.player.y + this.game.player.height
+        )
+      );
+    }
+
+    // İstersen yerde Enter ile rolling'e geçsin (artık çalışır)
+    if (input.includes('Enter')) {
+      this.game.player.setState(states.ROLLING, 2);
+    } else {
+      this.game.player.setState(states.RUNNING, 1);
+    }
+  }
+}
+}
+/*eski diving 
+
+
+export class Diving extends State {
+    constructor(game){
+        super('DIVING',game);
+    }
+    enter(){
+        this.game.player.frameX = 11;
+        this.game.player.maxFrame = 17;
+        this.game.player.frameY = 4;
+        this.game.player.vy = 15;
+    }
+    handleInput(input){
         this.game.particles.unshift(new Fire(this.game, this.game.player.x + this.game.player.width * 0.5, this.game.player.y + this.game.player.height * 0.5)); 
         if(this.game.player.onGround()){ console.log("if1");
             this.game.player.setState(states.RUNNING, 1);
@@ -156,14 +203,15 @@ export class Diving extends State {
     } 
 }
 
+*/ 
 export class HIT extends State {
     constructor(game){
         super('HIT',game);
     }
     enter(){
-        this.game.player.frameX = 0;
-        this.game.player.maxFrame = 7;
-        this.game.player.frameY = 4;
+        this.game.player.frameX = 0; //0
+        this.game.player.maxFrame = 7; //7
+        this.game.player.frameY = 4; //4
     }
     handleInput(input){
         if(this.game.player.frameX >= 7 && this.game.player.onGround()){
