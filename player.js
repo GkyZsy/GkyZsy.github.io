@@ -69,7 +69,7 @@ export class Player{
         //console.log(state);
         // state'e göre animasyon hızı
         if (state === 4) { // HIT
-            this.fps = 200;                 // daha hızlı (istersen 45/50 de deneyebilirsin)
+            this.fps = 250;                 // daha hızlı (istersen 45/50 de deneyebilirsin)
         } else {
             this.fps = 30;                 // normal
         }
