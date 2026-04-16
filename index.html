@@ -25,7 +25,7 @@
         </div>
 
         <div class="right-header">
-            <h1 class="name">
+            <h1 class="name" style="font-size: xx-large;">
                 Hi, I'm <span>Gökay.</span>
                 Computer Engineer and Full-Stack Developer.
             </h1>
@@ -34,38 +34,38 @@
                I design and build scalable web applications and interactive experiences from frontend to backend.
             </p>
             <p style="color: greenyellow;"> Here are my indie projects - feel free to explore.</p>
-            <div class="btn-con" style="display: grid; grid-template-columns: repeat(2, minmax(220px, 1fr)); gap: 1rem;">
+            <div class="btn-con" style="gap: 1rem; flex-wrap: wrap;">
 
-    <a href="game.html" class="main-btn" target="_blank">
-        <span class="btn-text">Play The Night Runner!</span>
-        <span class="btn-icon"><i class="fas fa-play"></i></span>
-    </a>
+                <a href="game.html" class="main-btn" target="_blank">
+                    <span class="btn-text">Play The Night Runner!</span>
+                    <span class="btn-icon"><i class="fas fa-play"></i></span>
+                </a>
 
-    <a href="https://gkyzsy.github.io/miniretrogames/"
-       class="main-btn"
-       target="_blank"
-       rel="noopener noreferrer">
-        <span class="btn-text">Visit MiniRetroGames</span>
-        <span class="btn-icon"><i class="fas fa-gamepad"></i></span>
-    </a>
+                <a href="https://gkyzsy.github.io/miniretrogames/"
+                   class="main-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span class="btn-text">Visit MiniRetroGames</span>
+                    <span class="btn-icon"><i class="fas fa-gamepad"></i></span>
+                </a>
 
-    <a href="https://gkyzsy.github.io/globepulse/"
-        class="main-btn"
-        target="_blank"
-        rel="noopener noreferrer">
-        <span class="btn-text">Open GlobePulse</span>
-        <span class="btn-icon"><i class="fas fa-globe"></i></span>
-     </a>
+                <a href="https://gkyzsy.github.io/globepulse/"
+                    class="main-btn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <span class="btn-text">Open GlobePulse</span>
+                    <span class="btn-icon"><i class="fas fa-globe"></i></span>
+                 </a>
 
-     <a href="https://gkyzsy.github.io/dailyapp/"
-        class="main-btn"
-        target="_blank"
-        rel="noopener noreferrer">
-        <span class="btn-text">Open Daily Stand-up Picker</span>
-        <span class="btn-icon"><i class="fas fa-users"></i></span>
-    </a>
+                  <a href="https://gkyzsy.github.io/dailyapp/"
+                    class="main-btn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <span class="btn-text" style="white-space: nowrap;">Open Daily Stand-up Picker</span>
+                    <span class="btn-icon"><i class="fas fa-users"></i></span>
+                 </a>
 
-</div>
+            </div>
         </div>
     </div>
 </header>
@@ -97,6 +97,28 @@
         </div>
 
     </section>
+    <section class="container about projects-section" id="projects">
+    <div class="main-title">
+        <h2>Current <span>Projects</span><span class="bg-text"></span></h2>
+    </div>
+
+    <div class="about-container">
+        <div class="left-about">
+            <h4>What I'm working on</h4>
+            <p>
+                <div class="current-project-card">
+                    <h5>Blaze of Vengeance</h5>
+                    <img src="img_game/Black_Knight_Art.gif" alt="Project preview" class="current-project-gif" style="width: 100%; max-width: 420px; height: auto; border-radius: 12px; display: block; margin-top: 1rem;">
+                    <p>
+                        The story of a cursed infantry. In 2D. Coming soon.
+                    </p>
+                </div>
+
+            </p>
+        </div>
+    </div>
+</section>
+
 </main>
 
 <div class="controls">
@@ -106,7 +128,9 @@
     <div class="control" data-id="about">
         <i class="fas fa-user"></i>
     </div>
-
+     <div class="control" data-id="projects">
+        <i class="fas fa-rocket"></i>
+    </div>
     <div id="stats" style="display: none;">
         <script src="//counter.websiteout.com/js/2/5/0/0"></script>
     </div>

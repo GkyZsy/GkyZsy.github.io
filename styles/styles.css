@@ -201,6 +201,16 @@ section {
 .header-content .left-header .image img:hover {
   filter: grayscale(0);
 }
+.projects-section {
+  min-height: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.projects-section .about-container {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
 
 /* Sprite overrides */
 .header-content .left-header .image.sprite-wrapper {
